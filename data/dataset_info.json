@@ -549,6 +549,7 @@
     }
   },
   "rlhf_v": {
+    "file_name": "../../data/raw/RLHF-V-Dataset.parquet",
     "hf_hub_url": "llamafactory/RLHF-V",
     "ranking": true,
     "formatting": "sharegpt",
@@ -559,6 +560,31 @@
       "images": "images"
     }
   },
+  "rlhf_v_sft": {
+    "file_name": "../../data/processed/rlhf_v_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "images"
+  }
+},
+  "rlhf_v_text": {
+    "file_name": "../../data/processed/rlhf_v_text.json",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+        "messages": "conversations",
+        "chosen": "chosen",
+        "rejected": "rejected"
+    },
+    "tags": {
+        "role_tag": "from",
+        "content_tag": "value",
+        "user_tag": "human",
+        "assistant_tag": "gpt"
+    }
+
+},
   "vlfeedback": {
     "hf_hub_url": "Zhihui/VLFeedback",
     "ranking": true,
